@@ -1,0 +1,37 @@
+{
+  "name": "CreditTransaction",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "title": "User"
+    },
+    "action": {
+      "type": "string",
+      "title": "Action",
+      "enum": [
+        "background_sync",
+        "ai_query",
+        "doc_parse",
+        "whatsapp"
+      ]
+    },
+    "cost": {
+      "type": "number",
+      "title": "Credits charged"
+    },
+    "balance_after": {
+      "type": "number",
+      "title": "Balance after"
+    },
+    "metadata": {
+      "type": "string",
+      "title": "Details"
+    }
+  },
+  "required": [
+    "user_id",
+    "action",
+    "cost"
+  ]
+}
