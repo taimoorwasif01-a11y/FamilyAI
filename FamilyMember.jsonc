@@ -1,0 +1,62 @@
+{
+  "name": "FamilyMember",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "parent",
+        "child"
+      ],
+      "default": "child",
+      "title": "Role"
+    },
+    "avatar_color": {
+      "type": "string",
+      "default": "#6366f1",
+      "title": "Avatar color"
+    },
+    "birthday": {
+      "type": "string",
+      "format": "date",
+      "title": "Birthday"
+    },
+    "school": {
+      "type": "string",
+      "title": "School"
+    },
+    "grade": {
+      "type": "string",
+      "title": "Grade / Year"
+    },
+    "interests": {
+      "type": "string",
+      "title": "Interests"
+    },
+    "learning_style": {
+      "type": "string",
+      "title": "How they learn best",
+      "description": "e.g. visual diagrams, worked examples, step-by-step, stories"
+    },
+    "strengths": {
+      "type": "string",
+      "title": "Strengths"
+    },
+    "weaknesses": {
+      "type": "string",
+      "title": "Weaknesses"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "name",
+    "role"
+  ]
+}
