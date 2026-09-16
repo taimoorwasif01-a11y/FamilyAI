@@ -1,0 +1,45 @@
+{
+  "name": "Todo",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "done"
+      ],
+      "default": "pending",
+      "title": "Status"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium",
+      "title": "Priority"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Due date"
+    },
+    "assigned_to": {
+      "type": "string",
+      "title": "Assigned to"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
