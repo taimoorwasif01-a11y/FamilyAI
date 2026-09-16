@@ -1,0 +1,106 @@
+{
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The role of the user in the app",
+      "enum": [
+        "admin",
+        "user"
+      ]
+    },
+    "job_title": {
+      "type": "string",
+      "title": "Job title"
+    },
+    "job_field": {
+      "type": "string",
+      "title": "Field / industry"
+    },
+    "work_context": {
+      "type": "string",
+      "title": "Work context & goals"
+    },
+    "user_tier": {
+      "type": "string",
+      "title": "Subscription tier",
+      "enum": [
+        "free_trial",
+        "solo_basic",
+        "elite_family",
+        "academic_powerhouse",
+        "admin",
+        "banned"
+      ],
+      "default": "free_trial"
+    },
+    "credit_balance": {
+      "type": "number",
+      "title": "Credit balance",
+      "default": 75
+    },
+    "credit_overage_buffer": {
+      "type": "number",
+      "title": "Credit overage buffer",
+      "default": 0
+    },
+    "credit_reset_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Credit reset date"
+    },
+    "stripe_customer_id": {
+      "type": "string",
+      "title": "Stripe customer ID"
+    },
+    "stripe_subscription_id": {
+      "type": "string",
+      "title": "Stripe subscription ID"
+    },
+    "stripe_subscription_status": {
+      "type": "string",
+      "title": "Stripe subscription status"
+    },
+    "paddle_customer_id": {
+      "type": "string",
+      "title": "Paddle customer ID"
+    },
+    "paddle_subscription_id": {
+      "type": "string",
+      "title": "Paddle subscription ID"
+    },
+    "paddle_subscription_status": {
+      "type": "string",
+      "title": "Paddle subscription status",
+      "description": "active | canceled | paused"
+    },
+    "whatsapp_enabled": {
+      "type": "boolean",
+      "title": "WhatsApp enabled",
+      "default": false
+    },
+    "daily_whatsapp_count": {
+      "type": "number",
+      "title": "Daily WhatsApp count",
+      "default": 0
+    },
+    "total_tokens_consumed": {
+      "type": "number",
+      "title": "Lifetime credits consumed",
+      "default": 0
+    },
+    "parent_account_id": {
+      "type": "string",
+      "title": "Parent account ID"
+    },
+    "data_retention_consent": {
+      "type": "boolean",
+      "title": "Data retention consent",
+      "default": false
+    }
+  },
+  "required": [
+    "role"
+  ],
+  "name": "User",
+  "type": "object"
+}
