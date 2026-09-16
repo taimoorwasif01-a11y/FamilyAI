@@ -1,0 +1,48 @@
+{
+  "name": "Syllabus",
+  "type": "object",
+  "properties": {
+    "member_name": {
+      "type": "string",
+      "title": "Child"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "content_text": {
+      "type": "string",
+      "title": "Syllabus text"
+    },
+    "file_url": {
+      "type": "string",
+      "title": "File URL"
+    },
+    "file_name": {
+      "type": "string",
+      "title": "File name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processed",
+        "failed"
+      ],
+      "default": "pending",
+      "title": "Status"
+    },
+    "topics_count": {
+      "type": "number",
+      "default": 0,
+      "title": "Topics extracted"
+    }
+  },
+  "required": [
+    "member_name"
+  ]
+}
