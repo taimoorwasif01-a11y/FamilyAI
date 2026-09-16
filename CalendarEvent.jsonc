@@ -1,0 +1,91 @@
+{
+  "name": "CalendarEvent",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "member_name": {
+      "type": "string",
+      "title": "Family member"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "school",
+        "appointment",
+        "sports",
+        "activity",
+        "birthday",
+        "holiday",
+        "exam",
+        "revision",
+        "other"
+      ],
+      "default": "other",
+      "title": "Category"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Start"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "End"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    },
+    "is_recurring": {
+      "type": "boolean",
+      "default": false,
+      "title": "Recurring"
+    },
+    "recurrence": {
+      "type": "string",
+      "title": "Recurrence",
+      "description": "e.g. weekly-Tuesday"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "google"
+      ],
+      "default": "manual",
+      "title": "Source",
+      "description": "Where the event came from"
+    },
+    "external_id": {
+      "type": "string",
+      "title": "External event id",
+      "description": "ID of the event in the connected calendar (Google)"
+    },
+    "external_calendar_id": {
+      "type": "string",
+      "title": "External calendar id",
+      "description": "ID of the calendar the event belongs to in the connected service"
+    },
+    "synced_by_id": {
+      "type": "string",
+      "title": "Synced by",
+      "description": "User who connected the calendar this event was synced from"
+    }
+  },
+  "required": [
+    "title",
+    "start_date"
+  ]
+}
