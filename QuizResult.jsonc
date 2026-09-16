@@ -1,0 +1,42 @@
+{
+  "name": "QuizResult",
+  "type": "object",
+  "properties": {
+    "member_name": {
+      "type": "string",
+      "title": "Child"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "topic": {
+      "type": "string",
+      "title": "Topic"
+    },
+    "score": {
+      "type": "number",
+      "title": "Score (%)"
+    },
+    "total_questions": {
+      "type": "number",
+      "default": 5,
+      "title": "Total questions"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Date"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "member_name",
+    "subject",
+    "topic",
+    "score"
+  ]
+}
