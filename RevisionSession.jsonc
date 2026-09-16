@@ -1,0 +1,52 @@
+{
+  "name": "RevisionSession",
+  "type": "object",
+  "properties": {
+    "member_name": {
+      "type": "string",
+      "title": "Child"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "topic": {
+      "type": "string",
+      "title": "Topic"
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Scheduled for"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 20,
+      "title": "Duration (min)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "completed"
+      ],
+      "default": "planned",
+      "title": "Status"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Completed"
+    },
+    "reason": {
+      "type": "string",
+      "title": "Why this was planned"
+    }
+  },
+  "required": [
+    "member_name",
+    "subject",
+    "topic",
+    "scheduled_date"
+  ]
+}
