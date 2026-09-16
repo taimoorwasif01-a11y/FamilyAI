@@ -1,0 +1,41 @@
+{
+  "name": "TutorTopic",
+  "type": "object",
+  "properties": {
+    "member_name": {
+      "type": "string",
+      "title": "Child"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "topic": {
+      "type": "string",
+      "title": "Topic"
+    },
+    "mastery_level": {
+      "type": "number",
+      "default": 0,
+      "title": "Mastery (0-100)"
+    },
+    "learning_style": {
+      "type": "string",
+      "title": "Learning style for this topic"
+    },
+    "last_practiced": {
+      "type": "string",
+      "format": "date",
+      "title": "Last practiced"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Tutor notes"
+    }
+  },
+  "required": [
+    "member_name",
+    "subject",
+    "topic"
+  ]
+}
